@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CloudMovement : MonoBehaviour
+{
+    [SerializeField] private MeshRenderer _cloud1;
+    [SerializeField] private MeshRenderer _cloud2;
+    [SerializeField] private MeshRenderer _cloud3;
+
+    [SerializeField] private float _animationSpeedCloud1 = 0.01f;
+    [SerializeField] private float _animationSpeedCloud2 = 0.01f;
+    [SerializeField] private float _animationSpeedCloud3 = 0.01f;
+
+    void Update()
+    {
+        _cloud1.material.mainTextureOffset += new Vector2(_animationSpeedCloud1 * Time.deltaTime, 0);
+        _cloud2.material.mainTextureOffset += new Vector2(_animationSpeedCloud2 * Time.deltaTime, 0);
+        _cloud3.material.mainTextureOffset += new Vector2(_animationSpeedCloud3 * Time.deltaTime, 0);
+    }
+}
