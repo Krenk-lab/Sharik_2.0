@@ -167,11 +167,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Karusel2019-Regular SDF
+  m_Name: Karusel 2.0
   m_EditorClassIdentifier: 
-  hashCode: 531449499
+  hashCode: 1874919291
   material: {fileID: -6944867674801581625}
-  materialHashCode: -959763621
+  materialHashCode: -1515270661
   m_Version: 1.1.0
   m_SourceFontFileGUID: cb6f2a1e315b5ff479de5efa01fb9113
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: cb6f2a1e315b5ff479de5efa01fb9113, type: 3}
