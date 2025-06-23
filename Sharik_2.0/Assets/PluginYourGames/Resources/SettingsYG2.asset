@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SettingsYG2
   m_EditorClassIdentifier: 
   Authorization:
-    playerPhotoSize: 1
+    playerPhotoSize: 0
     authorized: 1
     playerName: Player current
     uniqueID: 000
@@ -135,8 +135,22 @@ MonoBehaviour:
       it: 
       de: 
       hi: 
+  InterstitialAdv:
+    showFirstAdv: 1
+    interAdvInterval: 5
+    postponeCallByFail: 0
+    postponeCallTimer: 10
+    labelAdvSimLabel: 0
   Localization:
     setLanguageMod: 1
+  RewardedAdv:
+    rewardedAfterClosing: 1
+    skipInterAdvAfterReward: 0
+    labelAdvSimLabel: 0
+  Storage:
+    saveLocal: 1
+    saveCloud: 1
+    flush: 0
   Basic:
     platform: {fileID: 0}
     autoApplySettings: 1
@@ -150,7 +164,7 @@ MonoBehaviour:
     loadSceneIndex: 0
     simulationLoadScene: 0
   Simulation:
-    device: 1
+    device: 0
     language: ru
     advIntervalSimulation: 60
     durationAdv: 0.5
@@ -186,6 +200,12 @@ MonoBehaviour:
   platformInfo:
     ownHost: 0
   platformToggles:
+    showFirstAdv: 0
+    interAdvInterval: 0
+    postponeCallByFail: 0
+    skipInterAdvAfterReward: 0
+    saveLocal: 0
+    saveCloud: 0
     selectWebGLTemplate: 1
     runInBackground: 1
     enableExceptions: 1
