@@ -21,6 +21,7 @@ public class Progress : MonoBehaviour
 
     private void Awake() {
         if (Instance == null) {
+            YG2.StickyAdActivity(true);
             Instance = this;
             transform.parent = null;
             DontDestroyOnLoad(gameObject);
