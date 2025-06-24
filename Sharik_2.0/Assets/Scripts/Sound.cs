@@ -1,32 +1,29 @@
 using UnityEngine;
-using UnityEngine.UI;
+using YG;
 
 public class Sound : MonoBehaviour
 {
-    [SerializeField] private Button _audioButton;
-
-    [SerializeField] private Sprite _mute;
-    [SerializeField] private Sprite _volume;
-
+    public static Sound Instance;
+    
     private AudioSource _sound;
 
     public void OnSound() {       
-        _sound.mute = !Progress.Instance.IsOnSound();
-        ChangingSprite();
+        _sound.mute = Progress.Instance.SwitchMute();
+    }
+
+    private void Awake() {
+        if (Instance == null) {
+            Instance = this;
+            transform.parent = null;
+            DontDestroyOnLoad(gameObject);
+        }
+        else {
+            Destroy(gameObject);
+        }
     }
 
     private void Start() {
         _sound = GetComponent<AudioSource>();
-        ChangingSprite();
-    }
-
-    private void ChangingSprite() {
-        if (_sound.mute) {
-            _audioButton.GetComponent<Image>().sprite = _mute;
-        }
-        else {
-            _audioButton.GetComponent<Image>().sprite = _volume;
-        }
-
+        _sound.mute = YG2.saves.IsMute;
     }
 }

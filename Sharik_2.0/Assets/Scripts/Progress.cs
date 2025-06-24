@@ -4,15 +4,15 @@ using YG;
 public class Progress : MonoBehaviour
 {
     public int Record { get; private set; }
-    public bool SoundOn { get; private set; }
+    public bool Mute { get; private set; }
 
     public static Progress Instance;
 
-    public bool IsOnSound() {
-        SoundOn = !SoundOn;
-        YG2.saves.IsAudioTrue = SoundOn;
+    public bool SwitchMute() {
+        Mute = !Mute;
+        YG2.saves.IsMute = Mute;
         YG2.SaveProgress();
-        return SoundOn;
+        return Mute;
     }
     public void SaveRecord() {
         YG2.saves.Record = Record;
@@ -33,6 +33,6 @@ public class Progress : MonoBehaviour
 
     private void LoadData() {
         Record = YG2.saves.Record;
-        SoundOn = YG2.saves.IsAudioTrue;
+        Mute = YG2.saves.IsMute;
     }
 }
