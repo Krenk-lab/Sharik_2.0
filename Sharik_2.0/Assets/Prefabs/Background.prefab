@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8419268039116862897
 Transform:
   m_ObjectHideFlags: 0
@@ -798,7 +798,6 @@ MonoBehaviour:
   _animationSpeedCloud2: 0.02
   _animationSpeedCloud3: 0.04
   _animationSpeedBalloons: -0.01
-  _isBalloons: 1
 --- !u!1 &5616815661516759072
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,7 +816,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7244176719080004763
 Transform:
   m_ObjectHideFlags: 0
@@ -1220,7 +1219,6 @@ MonoBehaviour:
   _animationSpeedCloud2: 0.02
   _animationSpeedCloud3: 0.04
   _animationSpeedBalloons: -0.01
-  _isBalloons: 1
 --- !u!1 &8226700682746675803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7840971912132371183
 Transform:
   m_ObjectHideFlags: 0
@@ -1383,7 +1381,6 @@ MonoBehaviour:
   _animationSpeedCloud2: 0.02
   _animationSpeedCloud3: 0.04
   _animationSpeedBalloons: -0.01
-  _isBalloons: 1
 --- !u!1 &8534667583340248967
 GameObject:
   m_ObjectHideFlags: 0
