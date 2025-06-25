@@ -16,16 +16,23 @@ public class Heart : MonoBehaviour
     [Range(0, 3)]
     [SerializeField] private int _value;
 
+    private DamagePanel _damagePanel;
+
     public void AddLife() {
         _value++;
     }
 
     public void LoseLife() {
         _value--;
+        _damagePanel.PlayDamage();
+    }
+
+    private void Start() {
+        _damagePanel = FindObjectOfType<DamagePanel>();
     }
 
     private void Update() {
-        SwitchImage();    
+        SwitchImage();
     }
 
     private void SwitchImage() {

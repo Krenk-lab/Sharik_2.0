@@ -8,6 +8,7 @@ public class Score : MonoBehaviour
 
     public void AddScore() {
         _score++;
+        Progress.Instance.AddRecord(_score);
         UpdateText();
     }
 

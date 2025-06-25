@@ -14,6 +14,15 @@ public class Progress : MonoBehaviour
         YG2.SaveProgress();
         return Mute;
     }
+
+    public void AddRecord(int record) {
+        if(Record < record)
+        {
+            Record = record;
+            SaveRecord();
+        }
+    }
+
     public void SaveRecord() {
         YG2.saves.Record = Record;
         YG2.SaveProgress();

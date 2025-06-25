@@ -1,34 +1,45 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PopManager : MonoBehaviour
 {
+    [SerializeField] private Image _balloonImage;
+
     [SerializeField] private BalloonColor _color;
-    
-    private BalloonSpriteProvider balloonSpriteProvider;
+
+    private BalloonSpriteProvider _balloonSpriteProvider;
     private Heart _heart;
     private Score _score;
 
     public void ChekAdd(BalloonColor color) {
-        if(color == _color) {
+        if (color == _color) {
             _score.AddScore();
         }
         else {
             _heart.LoseLife();
         }
     }
-    public bool ValidatePop(BalloonColor color) {
-        if (color == _color)
-            return true;
-        return false;
-    }
 
     private void Start() {
         _score = FindAnyObjectByType<Score>();
         _heart = FindAnyObjectByType<Heart>();
+        _balloonSpriteProvider = GetComponent<BalloonSpriteProvider>();
+        StartCoroutine(SwitchColor());
     }
 
     private void RandomColor() {
-        balloonSpriteProvider.GetSprite(_color);
+        BalloonColor color = (BalloonColor)Random.Range(0, 6);
+        _color = color;
+        _balloonImage.sprite = _balloonSpriteProvider.GetSprite(color);
+    }
+
+    private IEnumerator SwitchColor() {
+        while (true) {
+            RandomColor();
+            float pause = Random.Range(2, 8);
+            yield return new WaitForSeconds(pause);
+        }
     }
 
 }
