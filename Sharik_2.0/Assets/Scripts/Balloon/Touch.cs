@@ -3,16 +3,17 @@ using UnityEngine;
 public class Touch : MonoBehaviour
 {
     private Animator _anim;
-    private PopManager popManager;
+    private PopManager _popManager;
 
     private void Start() {
         _anim = GetComponentInChildren<Animator>();
-        popManager = FindAnyObjectByType<PopManager>();
+        _popManager = FindFirstObjectByType<PopManager>();
     }
 
     private void OnMouseDown() {
         _anim.enabled = true;
-        popManager.ChekAdd(transform.GetComponent<Stats>().Color);
+        _popManager.ChekAdd(transform.GetComponent<Stats>().Color);
+        Sound.Instance.PlaySound();
 
         Debug.Log(transform.GetComponent<Stats>().Color);
     }

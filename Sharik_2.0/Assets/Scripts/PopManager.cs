@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PopManager : MonoBehaviour
 {
     [SerializeField] private BalloonColor _color;
+    
     private BalloonSpriteProvider balloonSpriteProvider;
     private Heart _heart;
     private Score _score;

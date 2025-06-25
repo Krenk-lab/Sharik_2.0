@@ -7,6 +7,11 @@ public class Sound : MonoBehaviour
     
     private AudioSource _sound;
 
+    public void PlaySound() {
+        if (!Progress.Instance.Mute) {
+            _sound.Play();
+        } 
+    }
     public void OnSound() {       
         _sound.mute = Progress.Instance.SwitchMute();
     }

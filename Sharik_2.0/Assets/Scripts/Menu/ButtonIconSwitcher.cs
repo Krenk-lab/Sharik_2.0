@@ -9,9 +9,12 @@ public class ButtonIconSwitcher : MonoBehaviour
 
     private Image _audioButton;
 
-    public void SwitchSprite() {
+    public void OnSound() {
         Sound.Instance.OnSound();
+        SwitchSprite();
+    }
 
+    private void SwitchSprite() {
         if (Progress.Instance.Mute) {
             _audioButton.sprite = _mute;
             Debug.Log("Mute");
@@ -21,6 +24,8 @@ public class ButtonIconSwitcher : MonoBehaviour
             Debug.Log("Don't mute");
         }
     }
+    
+
     private void Start() {
         _audioButton = GetComponent<Image>();
         SwitchSprite();
