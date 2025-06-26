@@ -18,6 +18,7 @@ public class Progress : MonoBehaviour
     public void AddRecord(int record) {
         if(Record < record)
         {
+            YG2.SetLeaderboard("Score", record);
             Record = record;
             SaveRecord();
         }

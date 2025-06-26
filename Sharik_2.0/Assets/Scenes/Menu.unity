@@ -810,8 +810,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\u0435\u0441\u043B\u0438 \u043B\u043E\u043F\u043D\u0443\u043B \u043D\u0435
-    \u0442\u043E\u0442 \u043F\u043E\u0442\u0435\u0440\u044F\u0439 \u0436\u0438\u0437\u043D\u044C
-    \u0438 \u043D\u0430\u0447\u043D\u0438 \u0441\u043D\u0430\u0447\u0430\u043B\u0430"
+    \u0442\u043E\u0442 \u043F\u043E\u0442\u0435\u0440\u044F\u0439 \u0436\u0438\u0437\u043D\u044C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6d9b22fe3ec5e944b9572752ab31203, type: 2}
   m_sharedMaterial: {fileID: 5984870184772185273, guid: c6d9b22fe3ec5e944b9572752ab31203, type: 2}
@@ -1021,9 +1020,8 @@ MonoBehaviour:
       hi: 
   text: 
   ru: "\u0435\u0441\u043B\u0438 \u043B\u043E\u043F\u043D\u0443\u043B \u043D\u0435
-    \u0442\u043E\u0442 \u043F\u043E\u0442\u0435\u0440\u044F\u0439 \u0436\u0438\u0437\u043D\u044C
-    \u0438 \u043D\u0430\u0447\u043D\u0438 \u0441\u043D\u0430\u0447\u0430\u043B\u0430"
-  en: If you pop the wrong one, you lose a life and start over
+    \u0442\u043E\u0442 \u043F\u043E\u0442\u0435\u0440\u044F\u0439 \u0436\u0438\u0437\u043D\u044C"
+  en: If you popped the wrong one, lose a life
   tr: 
   az: 
   be: 
@@ -1087,11 +1085,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1065739533}
+  - {fileID: 532470296}
   - {fileID: 207613360}
   - {fileID: 883835442}
-  - {fileID: 532470296}
   - {fileID: 980457131}
-  - {fileID: 1065739533}
   - {fileID: 1877527880}
   m_Father: {fileID: 1837412047}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

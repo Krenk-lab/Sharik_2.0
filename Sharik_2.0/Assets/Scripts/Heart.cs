@@ -17,6 +17,7 @@ public class Heart : MonoBehaviour
     [SerializeField] private int _value;
 
     private DamagePanel _damagePanel;
+    private DeathMenu _death;
 
     public void AddLife() {
         _value++;
@@ -25,10 +26,14 @@ public class Heart : MonoBehaviour
     public void LoseLife() {
         _value--;
         _damagePanel.PlayDamage();
+        if(_value < 1) {
+            _death.Death();
+        }
     }
 
     private void Start() {
         _damagePanel = FindObjectOfType<DamagePanel>();
+        _death = FindObjectOfType<DeathMenu>();
     }
 
     private void Update() {
