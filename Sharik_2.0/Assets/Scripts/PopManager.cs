@@ -37,7 +37,7 @@ public class PopManager : MonoBehaviour
     private IEnumerator SwitchColor() {
         while (true) {
             RandomColor();
-            float pause = Random.Range(2, 8);
+            float pause = Random.Range(2, 6);
             yield return new WaitForSeconds(pause);
         }
     }

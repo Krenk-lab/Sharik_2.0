@@ -21,6 +21,7 @@ public class Heart : MonoBehaviour
 
     public void AddLife() {
         _value++;
+        SwitchImage();
     }
 
     public void LoseLife() {
@@ -29,14 +30,12 @@ public class Heart : MonoBehaviour
         if(_value < 1) {
             _death.Death();
         }
+        SwitchImage();
     }
 
     private void Start() {
         _damagePanel = FindObjectOfType<DamagePanel>();
         _death = FindObjectOfType<DeathMenu>();
-    }
-
-    private void Update() {
         SwitchImage();
     }
 
