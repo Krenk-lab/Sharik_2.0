@@ -13,8 +13,8 @@ public class SpawnBalloons : MonoBehaviour
     [SerializeField] private float _minPause = 1f;
     [SerializeField] private float _maxPause = 1.5f;
 
-    [Header("Количество слотов по X")]
-    [SerializeField] private int _slots = 5;
+    //[Header("Количество слотов по X")]
+    //[SerializeField] private int _slots = 5;
 
     private void Start() {
         StartCoroutine(Spawn());
